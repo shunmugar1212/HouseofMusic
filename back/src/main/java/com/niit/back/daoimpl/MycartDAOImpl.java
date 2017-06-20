@@ -52,7 +52,16 @@ public class MycartDAOImpl implements MycartDAO {
 		
 		}
 	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Mycart> listCartByStatus(String userID, String status) {
 
+		return sessionFactory.getCurrentSession()
+			.createQuery("from Mycart where email=" + "'" + userID + "' " + "  and status = " + "'" + status + "'")
+				.list();
+
+	}
+	
 	public boolean delete(int cartid) {
 		try {
 			sessionFactory.getCurrentSession().delete(getByCartId(cartid));
@@ -84,7 +93,7 @@ public class MycartDAOImpl implements MycartDAO {
 		
 		return list;
 	}
-	public Mycart getByProductId(int productId) {
+	public Mycart getByProductId(String productId) {
 		String hql = "from Mycart where productid ='" + productId + "'";
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -132,7 +141,7 @@ public class MycartDAOImpl implements MycartDAO {
 		return null;
 	}
 
-
+	@Transactional
 	public Long getTotal(String id) {
 		String hql = "select sum(total) from Mycart where email = " + "'" + id + "'" + "and status = '" + "N" +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
@@ -169,6 +178,18 @@ public class MycartDAOImpl implements MycartDAO {
 			return false;
 		}
 		return true;
+	}
+
+
+	public boolean itemAlreadyExist1(String email, String productName, boolean b) {
+		String hql = "from Mycart where email= '" + email + "' and " + " Name ='" + productName +"'";
+		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<Mycart> list = (List<Mycart>) query.list();
+		if (list != null && !list.isEmpty()) {
+			return true;
+		}
+		return false;
 	}
 
 }

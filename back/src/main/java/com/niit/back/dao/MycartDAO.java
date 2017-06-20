@@ -20,15 +20,19 @@ public interface MycartDAO {
 	
 	public  List<Mycart> getByEmail(String email);
 
-	public Mycart getByProductId(int productId);
+	public Mycart getByProductId(String productId);
 	
 	public Long getTotal(String id);
 
 	public boolean itemAlreadyExist(String email, String productId, boolean b);
 
+	public boolean itemAlreadyExist1(String email, String productName, boolean b);
+	
 	public Mycart getByUserandProduct(String email, String productId);
 	
 	public void updateshipping(String email, int sid);
 
 	public boolean saveOrUpdate(Mycart c);
+	
+	public List<Mycart> listCartByStatus(String userID, String status);
 }

@@ -70,11 +70,6 @@ public class ProductDAOImpl implements ProductDAO {
 		productToDelete.setProductId(id);
 		sessionFactory.getCurrentSession().delete(productToDelete);
 	}
-	
-	public List<Product> list(String category) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public Product get(String productId) {
 		
@@ -122,7 +117,14 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public List<Product> list(String categoryName) {
+		String hql = "from Product where category ='" + categoryName + "'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<Product> list = (List<Product>) query.list();
 
+		return list;  
+	}
 
 
 

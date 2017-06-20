@@ -26,5 +26,7 @@ public interface ProductDAO {
 
 	public List<Product> getSimilarProducts(String search_string) ;
 
+	public List<Product> list(String categoryName);
+
 
 }
