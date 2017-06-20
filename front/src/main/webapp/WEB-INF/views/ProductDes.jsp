@@ -68,6 +68,9 @@ span.glyphicon {
 
 
 </style>
+
+<body style="background-image: url('resources/images/bg.png');">
+<br><br><br><br>
 <div class="col-lg-12">
 <div class="col-lg-2"></div>
 <div class="col-lg-8">
@@ -84,9 +87,8 @@ span.glyphicon {
 								<h2>${product.productName}</h2>
 								<h6>Brand: ${product.brand}</h6>
 								Colour:<div class="attr" style="width:25px;background:${product.colour};"></div>
-								<p></p>
-								<p>Description</p>
-								<p>${product.description}</p>
+								<p>only ${product.stock} left. Hurry Up...</p>
+								<p>Description: ${product.description}</p>
 							</div>
 						</div>
 						
@@ -111,6 +113,8 @@ span.glyphicon {
 </div>
 <!-- <div class="col-lg-2"></div> -->
  </div>
+ </body>
+ 
 <script>
 //Starrr plugin
 var __slice = [].slice;

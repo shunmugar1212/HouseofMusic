@@ -73,6 +73,8 @@
     border-color:#fff;
 }
 </style>
+
+<body style="background-image: url('resources/images/bg.png');">
 <div class="col-lg-12">
 <div class="col-lg-9"></div>
 <div class="col-lg-2">
@@ -102,3 +104,4 @@
             </div>
         </div>
 </c:forEach>
+</body>

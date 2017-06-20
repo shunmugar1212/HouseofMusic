@@ -75,17 +75,25 @@
 }
 </style>
 
-
+<body style="background-image: url('resources/images/bg.png');">
 <div class="col-lg-12">
-<div class="col-lg-9"></div>
+<div class="col-lg-7"></div>
 <div class="col-lg-2">
-<a href="Address" class="btn btn-lg btn-block btn-success">Next</a>
+<p class="btn btn-lg btn-block btn-info">Grand Tot:Rs.${GrandTotal}</p>
+</div>
+<div class="col-lg-2">
+<c:if test="${isCartEmpty=='true'}">
+No Items
+</c:if>
+<c:if test="${isCartEmpty=='false'}">
+<a href="Address" class="btn btn-lg btn-block btn-success">Proceed</a>
+</c:if>
 </div>
 </div>
 <c:forEach items="${mycartList}" var="mycart" varStatus="status">
 <div class="container">
             <div class="col-sm-12">
-                <div class="bs-calltoaction bs-calltoaction">
+                <div class="bs-calltoaction bs-calltoaction" style="background-color: white;">
                     <div class="row">
                          <div class="col-md-3 cta-contents">
                            <img class="img-responsive" src="resources/images/product/${mycart.productId}.jpg"></img>
@@ -98,7 +106,7 @@
                                 <p><b>Delivery In:</b>${mycart.days}days</p>
                                 <p><b>Price:</b>Rs.${mycart.price}</p>
                                 <p><b>Quantity:</b>${mycart.quantity}</p>
-                                <p><b>Total Amount:</b>Rs.${mycart.total}<c:out value="${GrandTotal}"></c:out></p>
+                                <p><b>Total Amount:</b>Rs.${mycart.total}</p>
                                 <p></p>
                             </div>
                         </div>
@@ -109,5 +117,11 @@
                 </div>
             </div>
         </div>
-</c:forEach>
-
+</c:forEach><br>
+<div class="container">
+            <div class="col-sm-12">
+            <a href="http://localhost:8080/front/afterlogin" class="btn btn-lg btn-block btn-info">Continue Shopping</a>
+            </div>
+            </div>
+            <br>
+</body>

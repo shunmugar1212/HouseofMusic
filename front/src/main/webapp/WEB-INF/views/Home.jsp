@@ -4,14 +4,18 @@
 <html>
 <head>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <title>Home</title>
 </head>
-<body bgcolor="black">
+<body style="background-image: url('resources/images/bg.png');">
 
 <jsp:include page="navbar.jsp"></jsp:include>
 <jsp:include page="slideshow.jsp"></jsp:include>
+<c:if test="${IsUserLoginFail=='true'}">
+	<h4><marquee><font color="red">${message}</font></marquee></h4>
+</c:if>
 <jsp:include page="ProductList.jsp"></jsp:include>
-<%-- <jsp:include page="footer.jsp"></jsp:include> --%>
+<jsp:include page="footer.jsp"></jsp:include>
  
 
 </body>

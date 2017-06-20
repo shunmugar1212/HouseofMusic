@@ -6,7 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <title>Admin</title>
 </head>
-<body>
+<body style="background-image: url('resources/images/bg.png');">
 
 <jsp:include page="navbar.jsp"></jsp:include>
 

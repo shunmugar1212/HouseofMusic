@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(http://fonts.googleapis.com/css?family=Gudea);
 .footer1 {
-    background: #fff url("../images/footer/footer-bg.png") repeat scroll left top;
+    background:url("../images/footer/footer-bg.png") repeat scroll left top;
 	padding-top: 40px;
 	padding-right: 0;
 	padding-bottom: 20px;
@@ -140,6 +140,7 @@
 }
 </style>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<body style="background-image: url('resources/images/bg.png');">
 <!--footer-->
 <footer class="footer1">
 <div class="container">
@@ -183,10 +184,10 @@
                 </div>
                 <br>
                 </div>
-                 <div class="col-lg-12">
+ <!--                 <div class="col-lg-12">
                 <h1 class="title-widget">Payment </h1>
                 <img alt="" src="resources/images/payment.png" style="height: 50px;width: 600px;">
-</div>
+</div> -->
 </div>
 </footer>
 <!--header-->
@@ -221,3 +222,4 @@
 	</div>
 </div>
 </div>
+</body>

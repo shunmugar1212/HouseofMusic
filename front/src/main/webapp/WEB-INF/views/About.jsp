@@ -11,14 +11,15 @@ p.text {
 }
 </style>
 
-<body style="background-color: #e2e2e2 !important;" >
+<body style="background-image: url('resources/images/bg.png');">
 <br><br><br><br><br><br>
+<center>
 <p class="heading">About Us</p>
 <p class="text" style="font-size: larger;">In India's fast growing retail industry filled with crowded hyper markets, monotonous electronic chains and absent music outlets, comes an innovative concept store that combines fashion, technology and entertainment. Headphone Zone is India's first exclusive online store for headphones, earphones and personal Audio devices featuring the world's finest headphones from brands renowned for their sound, design and style.</p>
 <br><br><br><br><br>
 <p class="heading">Why Shopping ?</p>
 <br><br>
-<div class="col-lg-12" style="height:400px;background-color: #e2e2e2 !important;">
+<div class="col-lg-12" style="height:400px;">
 <div class="col-lg-4">
 <p class="heading">A Unique Headphone for Everyone</p>
 		<p class="text">We find that each person needs a unique listening experience suited to their personality and so there is a right headphone for everyone: from an artist in the studio, a fitness buff, an audiophile, or a business traveller.</p>
@@ -36,5 +37,5 @@ p.text {
 </div>
 
 </div>
-
+</center>
 </body>

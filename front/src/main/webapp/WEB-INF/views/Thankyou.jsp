@@ -1,3 +1,4 @@
+<body style="background-image: url('resources/images/bg.png');">
 <div class="container" style="margin-top:5%;">
 	<div class="row">
         <div class="jumbotron" style="box-shadow: 2px 2px 4px #000000;">            
@@ -10,3 +11,4 @@
         </div>
 	</div>
 </div>
+</body>

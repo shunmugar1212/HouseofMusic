@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<body style="background-image: url('resources/images/bg.png');">
 <table class = "table table-bordered">
    <caption>Product List</caption>
    
@@ -33,3 +34,4 @@
    </c:forEach>
 	
 </table>
+</body>

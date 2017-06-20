@@ -170,7 +170,7 @@ a.nor {
           <ul class="nav navbar-nav navbar-right btn-outline btn-circle">
             <li><a class="nor" href="#">Home</a></li>
             <li><a class="nor" href="aboutPage">About</a></li>
-            <li><a class="nor" href="#">Contact</a></li>
+            <!-- <li><a class="nor" href="#">Contact</a></li> -->
           	<li><a class="btn btn-default btn-outline btn-circle collapsed nor"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a></li>
           	<c:if test="${isAdmin != 'true' }">
             <li><a class="btn btn-default btn-outline btn-circle collapsed nor"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse2"> Categories</a></li>
@@ -185,7 +185,8 @@ a.nor {
             <li><a class="btn btn-default btn-outline btn-circle collapsed nor"  id="myBtn">Sign up</a></li>
           	</c:if></c:if>
           	<c:if test="${isUser == 'true' }">
-          	<li><a class="btn btn-default btn-outline btn-circle collapsed nor" href="CartPage">Cart</a></li>
+          	<li><a class="btn btn-default btn-outline btn-circle collapsed nor" href="MycartPage">Cart</a></li>
+          	<li><a class="btn btn-default btn-outline btn-circle collapsed nor" href="MycartPage1">Order History</a></li>
           	</c:if>
           	<c:if test="${isUser == 'true'||isAdmin == 'true' }">
           	<li><a class="btn btn-default btn-outline btn-circle collapsed nor" href="logout">Log out</a></li>
@@ -201,9 +202,18 @@ a.nor {
             </form>
           </div>
            <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse1">
-            <li><a class="nor" href="#">Headphone with mic</a></li>
-            <li><a class="nor" href="#">Boom Headphone</a></li>
-            <li><a class="nor" href="#">Bluetooth Headphone</a></li>
+            <c:if test="${isAdmin != 'true' }"><c:if test="${isUser != 'true' }">
+            <li><a class="nor" href="Categories1">All</a></li>
+            <li><a class="nor" href="Categories?CategoryName=Headphones with mic">Headphone with mic</a></li>
+            <li><a class="nor" href="Categories?CategoryName=Boom Headphones">Boom Headphone</a></li>
+            <li><a class="nor" href="Categories?CategoryName=Bluetooth Headphones">Bluetooth Headphone</a></li>
+            </c:if></c:if>
+            <c:if test="${isUser == 'true' }">
+            <li><a class="nor" href="Categories3">All</a></li>
+            <li><a class="nor" href="Categories2?CategoryName=Headphones with mic">Headphone with mic</a></li>
+            <li><a class="nor" href="Categories2?CategoryName=Boom Headphones">Boom Headphone</a></li>
+            <li><a class="nor" href="Categories2?CategoryName=Bluetooth Headphones">Bluetooth Headphone</a></li>
+            </c:if>
           </ul>
           <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse5">
             <li><a class="nor" href="CategoryPage">Add Category</a></li>

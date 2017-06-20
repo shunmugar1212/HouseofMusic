@@ -32,7 +32,7 @@ button {
 
 </style>
 
-
+<body style="background-image: url('resources/images/bg.png');">
  <form action="newShipping" method="post" class=" container" >
     <div class="">
       <center><h3><b>ADDRESS ADD SECTION</b></h3></center>
@@ -54,3 +54,4 @@ button {
       </div>
     </div>
   </form>
+</body>

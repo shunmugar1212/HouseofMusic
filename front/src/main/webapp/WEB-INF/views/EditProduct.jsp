@@ -33,6 +33,7 @@ button {
 
 </style>
 
+<body style="background-image: url('resources/images/bg.png');">
  <form action="afterEditProduct" class="container" >
     <div class="">
       <center><h3><b>PRODUCT EDIT SECTION</b></h3></center>
@@ -79,3 +80,4 @@ button {
     </div>
   </form>
 
+</body>

@@ -96,7 +96,7 @@ a.button:hover{
   }
 }
 </style>
-<body style="background-image: url('resources/images/wall.png');">
+<body style="background-image: url('resources/images/bg.png');">
 <div id="columns">
 <c:forEach items="${ProductList}" var="product">
   <figure>

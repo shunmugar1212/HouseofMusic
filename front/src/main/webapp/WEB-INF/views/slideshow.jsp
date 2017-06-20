@@ -2,8 +2,8 @@
 <script type="text/javascript" src="resources/engine1/jquery.js"></script>
 
 <br><br>
-<body style="background-image: url('resources/images/wall.png');">
-	<div id="wowslider-container1" style="background-color: white">
+<body>
+	<div id="wowslider-container1" style="background-color: white;">
 		<div class="ws_images"><ul>
 		<li><img src="resources/data1/images/_0.jpg" alt=" " title=" " id="wows1_0"/></li>
 		<li><img src="resources/data1/images/_1.jpg" alt=" " title=" " id="wows1_1"/></li>

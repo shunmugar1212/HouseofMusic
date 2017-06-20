@@ -91,7 +91,7 @@
 }
 </style>
 
-
+<body style="background-image: url('resources/images/bg.png');">
 <br><br>
 <div class="container">
  <div class="well span8 offset2">
@@ -180,7 +180,7 @@
         
     </div>
 </div>
-
+</body>
 
 <script>
 $(document).ready(function() {

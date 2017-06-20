@@ -37,7 +37,7 @@
 		<security:form-login
 			login-processing-url="/signIn"
 			 default-target-url="/afterlogin"
-			authentication-failure-url="/LoginPage?error" 
+			authentication-failure-url="/LoginError" 
 			username-parameter="email"
 			password-parameter="password" />
 
