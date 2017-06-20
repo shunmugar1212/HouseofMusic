@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.back.dao.ProductDAO;
 import com.niit.back.dao.RoleDAO;
@@ -70,10 +71,11 @@ public class UserController {
 		}
 		else if(r.equals("ROLE_ADMIN")) {
 			model.addAttribute("isAdmin", "true");
+			model.addAttribute("isUser", "false");
 			return "adminLogin";
 		}
 		else{
-			return "Home";
+			return "LoginError";
 		}
 		
 	}
@@ -94,6 +96,29 @@ public class UserController {
 		return "userLogin";
 	}
 	
+	@RequestMapping("/Categories3")
+	public  String    categories1(Model model)
+	
+	{
+		List<Product> ProductList = productDAO.list();
+		model.addAttribute("ProductList",ProductList);
+		model.addAttribute("IsUserClickedExplore1", "true");
+		return "userLogin";
+	}
+	
+	@RequestMapping("/Categories2")
+	public  String    categories(@RequestParam(value = "CategoryName") String categoryName, Model model)
+	
+	{
+		System.out.println(categoryName);
+		List<Product> ProductList = productDAO.list(categoryName);
+		model.addAttribute("ProductList",ProductList);
+		model.addAttribute("IsUserClickedExplore1", "true");
+		return "userLogin";
+	}
 
-
+	@ModelAttribute
+	public void adminCategory(Model model) {
+		model.addAttribute("isUser", "true");
+	}
 }

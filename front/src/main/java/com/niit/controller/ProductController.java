@@ -94,6 +94,7 @@ public class ProductController {
 		return "adminLogin";
 
 	}
+	
 	@RequestMapping("afterEditProduct")
 	public String afterEditProduct(@ModelAttribute Product product, Model model){
 		productDAO.save(product);

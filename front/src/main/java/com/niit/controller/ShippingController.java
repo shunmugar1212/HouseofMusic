@@ -74,12 +74,12 @@ public class ShippingController {
 	public String payment(@RequestParam("Id") int shippingId, Principal p, Model model)
 	{
 		String email = p.getName();
-		List<Mycart> mycartList = mycartDAO.getByEmail(email);
 		
-		for(Mycart c : mycartList){
+		for(Mycart c :  mycartDAO.getByEmail(email)){
+			c.setProductName(c.getProductName()+" ");
 			c.setShippingId(shippingId);
 			c.setStatus("P");
-			mycartDAO.saveOrUpdate(c);
+			mycartDAO.Update(c);
 		}
 		
 		model.addAttribute("isUserPayment", "true");
